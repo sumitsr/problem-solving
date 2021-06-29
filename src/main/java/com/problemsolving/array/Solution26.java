@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solition26 {
+class Solution26 {
     public static int findMaxSumSubArray(int k, int[] arr) {
         int maxSum = 0, windowSum;
         for (int i = 0; i <= arr.length - k; i++) {
