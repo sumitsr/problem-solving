@@ -180,3 +180,4 @@ gradle-app.setting
 **/build/
 /gradle/
 /gradle/
+/.gradle/
