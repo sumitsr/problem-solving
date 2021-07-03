@@ -1,25 +1,16 @@
 package com.problemsolving.bitmanipulation;
 
 class Solution14_2 {
-    private static int helper(int n) {
-        if (n == 0) {
-            return 0;
-        }
-
-        int k = 1;
-        
-        while (true) {
-            if (((n >> (k - 1)) & 1) == 0) {
-                k++;
-            } else {
-                return k;
-            }
-        }
+    public static boolean checkKthBitSet(int n, int k) {
+        // return (n & (1 << (k - 1))) != 0; this is using left shift
+        return ((n >> (k - 1)) & 1) == 1;
     }
 
     public static void main(String[] args) {
-        System.out.println("First setbit position for number: 18 is -> " + helper(18));
-        System.out.println("First setbit position for number: 5 is -> " + helper(5));
-        System.out.println("First setbit position for number: 32 is -> " + helper(32));
+        System.out.println("n = 5, k = 3 : " + checkKthBitSet(5, 3));
+        System.out.println("------------");
+        System.out.println("n = 10, k = 2 : " + checkKthBitSet(10, 2));
+        System.out.println("------------");
+        System.out.println("n = 10, k = 1 : " + checkKthBitSet(10, 1));
     }
 }
