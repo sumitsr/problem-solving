@@ -1,6 +1,6 @@
 package com.problemsolving.bitmanipulation;
 
-class CountDigits {
+class Solution01 {
     /**
      * Time complexity: O(n)
      *
