@@ -9,7 +9,17 @@ class Solution06 {
             int bitB = ((b >> i) & 1);
 
             if ((bitA | bitB) != bitC) {
-                ans += (bitC == 0) ? (bitA == 1 && bitB == 1) ? 2 : 1 : 1;
+                // one liner
+                // ans += (bitC == 0) ? (bitA == 1 && bitB == 1) ? 2 : 1 : 1;
+                if (bitC == 0) {
+                    if (bitA == 1 && bitB == 1) {
+                        ans += 2;
+                    } else {
+                        ans += 1;
+                    }
+                } else {
+                    ans += 1;
+                }
             }
         }
         return ans;
