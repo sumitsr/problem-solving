@@ -14,7 +14,7 @@ public class Solution17 {
         while (i >= 0 || j >= 0 || s == 1)
         {
              
-            // Comput sum of last
+            // Compute sum of last
             // digits and carry
             s += ((i >= 0)? a.charAt(i) - '0': 0);
             s += ((j >= 0)? b.charAt(j) - '0': 0);
