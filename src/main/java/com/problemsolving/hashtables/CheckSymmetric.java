@@ -5,10 +5,6 @@ import java.util.HashMap;
 class CheckSymmetric {
 
   public static String findSymmetric(int[][] arr) {
-    //Create an empty Hash Map
-    //Traverse given Array
-    //Look for second element of each pair in the hash. i.e for pair (1,2) look for key 2 in map.
-    //If found then store it in the result array, otherwise insert the pair in hash
     HashMap<Integer,Integer> hashMap = new HashMap< Integer,Integer >();
 
     String result = "";
