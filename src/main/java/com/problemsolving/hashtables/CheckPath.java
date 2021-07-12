@@ -21,7 +21,7 @@ class CheckPath {
     //Check if graph is disconnected
     int count = 0;
 
-    for (Map.Entry < String, String > entry: map.entrySet()) {
+    for (Map.Entry <String, String> entry: map.entrySet()) {
       if (!reverseMap.containsKey(entry.getKey())) {
         count++;
         from = entry.getKey();
