@@ -6,7 +6,7 @@ import java.util.Set;
 
 class StringSegmentationDP {
 
-  public static boolean canSegmentString(String s, Set<String> dictionary, int[] lookup) {
+  public static boolean helper(String s, Set<String> dictionary, int[] lookup) {
     int n = s.length();
     if (n == 0)
       return true;
@@ -20,7 +20,7 @@ class StringSegmentationDP {
         String prefix = s.substring(0, i);
 
         // if the prefix is found in the dictionary, then recur for the suffix
-        if (dictionary.contains(prefix) && canSegmentString(s.substring(i), dictionary, lookup)) {
+        if (dictionary.contains(prefix) && helper(s.substring(i), dictionary, lookup)) {
           lookup[n] = 1;
           return true;
         }
@@ -28,6 +28,13 @@ class StringSegmentationDP {
     }
     // return solution to the current sub-problem
     return lookup[n] == 1;
+  }
+
+  public static boolean canSegmentString(String s, Set<String> dictionary) {
+    int[] lookup = new int[s.length() + 1];
+    Arrays.fill(lookup, -1);
+
+    return helper(s, dictionary, lookup);
   }
 
   public static void main(String[] args) {
@@ -40,10 +47,7 @@ class StringSegmentationDP {
     dictionary.add("on");
     dictionary.add("now");
 
-    int[] lookup = new int[s.length() + 1];
-    Arrays.fill(lookup, -1);
-
-    if (canSegmentString(s, dictionary, lookup)) {
+    if (canSegmentString(s, dictionary)) {
       System.out.println("String Can be Segmented");
     } else {
       System.out.println("String Can NOT be Segmented");
