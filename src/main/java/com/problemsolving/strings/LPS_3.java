@@ -24,7 +24,7 @@ class LPS_3 {
   }
 
   public static void main(String[] args) {
-    LPS lps = new LPS();
+    LPS_3 lps = new LPS_3();
     System.out.println(lps.findLPSLength("abdbca"));
     System.out.println(lps.findLPSLength("cddpd"));
     System.out.println(lps.findLPSLength("pqr"));
