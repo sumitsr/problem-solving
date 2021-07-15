@@ -3,36 +3,62 @@ package com.problemsolving.strings;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class RegxMatch {
-  public static boolean regxMatchRec(String text, String pattern, int i, int j) {
-    if (text.length() == i && pattern.length() == j) {
+class RegxMatch{
+  static boolean regxMatchRec(String text, String pattern) {
+    if (text.isEmpty() && pattern.isEmpty()) {
       return true;
     }
 
-    if (j<pattern.length() - 1 && pattern.charAt(j + 1) == '*') {
-      for (int k = i; k<= text.length(); ++k) {
-        if (regxMatchRec(text, pattern, k, j + 2)) {
+    if (!text.isEmpty() && pattern.isEmpty()) {
+      return false;
+    }
+
+    if (pattern.length() > 1 && pattern.charAt(1) == '*') {
+    
+      String remainingPattern = pattern.substring(2);
+      String remainingText = text;
+
+      for (int i = 0; i < text.length() + 1; ++i) {
+        if (regxMatchRec(remainingText, remainingPattern)) {
           return true;
         }
 
-        if (k >= text.length()) {
+        if (remainingText.isEmpty()) {
           return false;
         }
 
-        if (pattern.charAt(j) != '.' && text.charAt(k) != pattern.charAt(j)) {
+        if (pattern.charAt(0) != '.' && 
+            remainingText.charAt(0) != pattern.charAt(0)) {
           return false;
         }
+
+        remainingText = remainingText.substring(1);
       }
-    } else if (i<text.length() && j<pattern.length() &&
-      (pattern.charAt(j) == '.' || pattern.charAt(j) == text.charAt(i))) {
-      return regxMatchRec(text, pattern, i + 1, j + 1);
+    } 
+  
+    if (text.isEmpty() || pattern.isEmpty()) {
+      return false;
     }
+
+    if (pattern.charAt(0) == '.' || pattern.charAt(0) == text.charAt(0)) {
+      String remainingText = "";
+      if (text.length() >= 2) {
+        remainingText = text.substring(1);
+      }
+
+      String remainingPattern = "";
+      if (pattern.length() >= 2) {
+        remainingPattern = pattern.substring(1);
+      } 
+
+      return regxMatchRec(remainingText, remainingPattern);
+    } 
 
     return false;
   }
 
-  public static boolean regxMatch(String text, String pattern) {
-    return regxMatchRec(text, pattern, 0, 0);
+  public static boolean regxMatch(String s, String p) {
+    return regxMatchRec(s, p);
   }
 
   public static void main(String[] args) {
@@ -40,8 +66,8 @@ class RegxMatch {
     String p = ".ab*c";
     boolean output2 = regxMatch(s, p);
 
-//    Pattern pattern = Pattern.compile(p);
-//    Matcher matcher = pattern.matcher(s);
+    Pattern pattern = Pattern.compile(p);
+    Matcher matcher = pattern.matcher(s);
     
     if (output2) {
 			System.out.print(s + " " + p + " match");
