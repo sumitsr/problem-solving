@@ -29,7 +29,7 @@ class LongestPalindromicSubstring {
   }
 
   public static void main(String[] args) {
-    LPS lps = new LPS();
+    LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
     System.out.println(lps.findLPSLength("abdbca"));
     System.out.println(lps.findLPSLength("cddpd"));
     System.out.println(lps.findLPSLength("pqr"));
