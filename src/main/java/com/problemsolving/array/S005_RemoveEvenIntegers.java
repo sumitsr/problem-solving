@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution5 {
+class S005_RemoveEvenIntegers {
   
 	public static int[] removeEven(int[] arr) {
 		int oddElements = 0;

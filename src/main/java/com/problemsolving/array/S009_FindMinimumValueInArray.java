@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution9 {
+class S009_FindMinimumValueInArray {
     //Returns minimum value from given Array
     public static int findMinimum(int[] arr) {
 

@@ -3,7 +3,7 @@ package com.problemsolving.array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Solution3 {
+public class S003_MaxEvenOddDifference {
     public static int solve(ArrayList<Integer> list) {
         int minOdd = Integer.MAX_VALUE;
         int maxEven = Integer.MIN_VALUE;

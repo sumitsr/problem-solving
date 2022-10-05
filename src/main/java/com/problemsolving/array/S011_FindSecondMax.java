@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution11 {
+class S011_FindSecondMax {
     //Returns second maximum value from given Array
     public static int findSecondMaximum(int[] arr) {
 

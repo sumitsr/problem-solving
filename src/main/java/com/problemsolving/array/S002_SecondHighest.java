@@ -3,7 +3,7 @@ package com.problemsolving.array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Solution2 {
+public class S002_SecondHighest {
     public static ArrayList<Integer> solve(ArrayList<Integer> list) {
         ArrayList<Integer> ans = new ArrayList<>();
         int highest = Integer.MIN_VALUE;

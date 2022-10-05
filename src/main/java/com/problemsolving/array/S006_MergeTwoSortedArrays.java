@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution6 {
+class S006_MergeTwoSortedArrays {
 
   // Merge arr1 and arr2 into resultantArray
   public static int[] mergeArrays(int[] arr1, int[] arr2) { 

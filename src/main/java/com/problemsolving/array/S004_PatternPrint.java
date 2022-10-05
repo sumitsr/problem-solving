@@ -2,7 +2,7 @@ package com.problemsolving.array;
 
 import java.util.ArrayList;
 
-public class Solution4 {
+public class S004_PatternPrint {
     public static ArrayList<ArrayList<Integer>> solve(int n) {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         int count = 1;

@@ -3,10 +3,10 @@ package com.problemsolving.array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Solution1 {
+public class S001_MinMax {
     public static int solve(ArrayList<Integer> list) {
         int ans = 0;
-        int mini = Integer.MIN_VALUE;
+        int mini = Integer.MAX_VALUE;
         int maxi = Integer.MIN_VALUE;
  
         // find smallest and greatest elements
