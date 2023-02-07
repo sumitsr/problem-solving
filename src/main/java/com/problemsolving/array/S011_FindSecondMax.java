@@ -5,7 +5,6 @@ class S011_FindSecondMax {
     public static int findSecondMaximum(int[] arr) {
 
         int max = Integer.MIN_VALUE;
-        ;
         int secondmax = Integer.MIN_VALUE;
 
         // Keep track of Maximum value, whenever the value at an array index is greater

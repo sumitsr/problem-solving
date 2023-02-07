@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class SolutionUsingNewArray14 {
+class S014_1_ArrayMinMaxFormUsingNewArray {
 
     public static void maxMin(int[] arr) {
         //Create a result array to hold re-arranged version of given arr
@@ -17,7 +17,6 @@ class SolutionUsingNewArray14 {
                 result[i] = arr[pointerLarge--]; // copy large values
             else
                 result[i] = arr[pointerSmall++]; // copy small values
-
             switchPointer = !switchPointer;   // switching between samll and large
         }
 

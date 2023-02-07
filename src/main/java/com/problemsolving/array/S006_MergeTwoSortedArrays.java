@@ -15,7 +15,7 @@ class S006_MergeTwoSortedArrays {
       // array is smaller than current element 
       // of second array. If yes, store first 
       // array element and increment first array 
-      // index. Otherwise do same with second array 
+      // index otherwise do same with second array
       if (arr1[i] < arr2[j]) 
         resultantArray[k++] = arr1[i++]; 
       else

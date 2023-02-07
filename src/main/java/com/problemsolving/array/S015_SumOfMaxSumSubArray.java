@@ -2,7 +2,7 @@ package com.problemsolving.array;
 
 import java.util.Arrays;
 
-class Solution15 {
+class S015_SumOfMaxSumSubArray {
     public static int findMaxSumSubArray(int[] arr) {
         if (arr.length < 1) {
             return 0;

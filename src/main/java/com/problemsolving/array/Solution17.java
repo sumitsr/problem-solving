@@ -10,7 +10,7 @@ class Solution17 {
     public static ArrayDeque<Integer> findMaxSlidingWindow(int[] arr, int windowSize) {
 
         ArrayDeque<Integer> result = new ArrayDeque<>(); // ArrayDeque for storing values
-        Deque<Integer> list = new LinkedList<Integer>(); // creating a linked list
+        Deque<Integer> list = new LinkedList<Integer>(); // create a linked list to store indices
 
         if (arr.length > 0) {
 

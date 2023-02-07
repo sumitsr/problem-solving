@@ -13,7 +13,7 @@ class S010_FindFirstNonRepeatingElementInArray {
                     break;
                 }
             } //end of InnerLoop
-            if (isRepeated == false) {
+            if (isRepeated == true) {
                 return arr[i];
             } else {
                 isRepeated = false;

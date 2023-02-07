@@ -15,7 +15,7 @@ class S008_ArrayOfProductsOfAllElementsExceptItself {
         temp = 1;
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            result[i] *= temp;    // multiply the value of temp here as this will ensure that all elemets of result array are products of elements to the right and the left of the original element.
+            result[i] *= temp;    // multiply the value of temp here as this will ensure that all elements of result array are products of elements to the right and the left of the original element.
             temp *= arr[i];
         }
 

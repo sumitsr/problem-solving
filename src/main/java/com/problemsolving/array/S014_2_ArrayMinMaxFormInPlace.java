@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution14 {
+class S014_2_ArrayMinMaxFormInPlace {
 
     public static void maxMin(int[] arr) {
         int maxIdx = arr.length - 1;

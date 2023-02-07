@@ -9,7 +9,7 @@ class S012_RotateArray {
         arr[0] = lastElement;
     }
 
-    public static void leftRotateArrayByOnePostion(int[] arr) {
+    public static void leftRotateArrayByOnePosition(int[] arr) {
         int firstElement = arr[0];
         for (int i = 0; i < arr.length - 1; i++) {
             arr[i] = arr[i + 1];
@@ -17,7 +17,7 @@ class S012_RotateArray {
         arr[arr.length - 1] = firstElement;
     }
 
-    public static int[] rightRotateArrayByKPostions(int[] arr, int k) {
+    public static int[] rightRotateArrayByKPositions(int[] arr, int k) {
         // if rotation is greater than size of array
         int n = arr.length;
         k = k % n;
@@ -33,7 +33,7 @@ class S012_RotateArray {
         return result;
     }
 
-    public static int[] leftRotateArrayByKPostions(int[] arr, int k) {
+    public static int[] leftRotateArrayByKPositions(int[] arr, int k) {
         // if rotation is greater than size of array
         int n = arr.length;
         k = k % n;
@@ -52,7 +52,7 @@ class S012_RotateArray {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        rightRotateArrayByOnePostion(arr);
+        arr = rightRotateArrayByKPositions(arr, 3);
         System.out.print("Array after rotation: ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");

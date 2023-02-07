@@ -1,6 +1,6 @@
 package com.problemsolving.array;
 
-class Solution13 {
+class S013_RearrangePositiveNegativeElements {
 
     //Re-Arrange Positive and Negative Values of Given Array
     public static void reArrange(int arr[]) {
@@ -9,15 +9,14 @@ class Solution13 {
         int newArray_index = 0;
 
         //Fill newArray with Negative Values first.
-        //Then Fill it with Postive Values.
-        //In the end, insert every element of newArray back into origional arr.
+        //Then Fill it with Positive Values.
+        //In the end, insert every element of newArray back into original arr.
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 0)
                 newArray[newArray_index++] = arr[i];
         }
 
         for (int i = 0; i < arr.length; i++) {
-
             if (arr[i] >= 0)
                 newArray[newArray_index++] = arr[i];
         }
@@ -28,7 +27,7 @@ class Solution13 {
     }
 
     public static void reArrangeInPlace(int[] arr) {
-        int j = 0;
+        int j = 0;  // to keep track of leftmost positive number
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 0) {   // if negative number found
                 if (i != j) {
@@ -50,7 +49,7 @@ class Solution13 {
             System.out.print(arr[i] + " ");
         System.out.println();
 
-        reArrange(arr);
+        reArrangeInPlace(arr);
 
         System.out.print("Array after rearranging: ");
         for (int i = 0; i < arr.length; i++)
